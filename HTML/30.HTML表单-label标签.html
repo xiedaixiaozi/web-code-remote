@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>30.HTML表单-label标签</title>
+</head>
+<body>
+    <form action="https://search.jd.com/Search">
+        <!-- 关联:方式一（label.for=input.id） -->
+        <label for="account">账户:</label>
+        <input id="account" type="text" name="account" value="xdxz" maxlength="20">
+        <br>
+        <!-- 关联:方式二（嵌套） -->
+        <label>
+            密码:
+            <input id="password" type="password" name="password" value="123456" maxlength="10">
+        </label>
+        <br>
+        性别:
+        <input id="male" type="radio" name="gender" value="male" checked>
+        <label for="male">男</label>
+        <label>
+            <input type="radio" name="gender" value="female">女
+        </label>
+        <br>
+        爱好:
+        <label>
+            <input type="checkbox" name="hobby" value="Genshin Impact" checked>Genshin Impact
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="Elden Ring">Elden Ring
+        </label>
+        <label>
+            <input type="checkbox" name="hobby" value="LOL">LOL
+        </label>
+        <br>
+        <label for="other">其他:</label>
+        <textarea id="other" name="other" cols="20" rows="5"></textarea>
+        <br>
+        籍贯:
+        <select name="place">
+            <option value="福州" selected>福州</option>
+            <option value="厦门">厦门</option>
+            <option value="泉州">泉州</option>
+        </select>
+        <br>
+        <button type="submit">确认</button>
+        <button type="reset">重置</button>
+        <button type="button">检测账户是否被注册</button>
+    </form>
+</body>
+</html>

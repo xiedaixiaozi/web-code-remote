@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>19.HTML超链接-锚点跳转</title>
+</head>
+<body>
+    <!-- 锚点跳转 -->
+    <!-- 当前页锚点 -->
+    <a href="#xg1">跳转至图2</a>
+    <a href="#xg2">跳转至图2</a>
+    <!-- 其他页锚点 -->
+    <a href="18.HTML超链接-文件跳转.html#xg1-other">跳转至18.HTML超链接-文件跳转.html#xg1-other（a.name）</a>
+    <a href="18.HTML超链接-文件跳转.html#xg2-other">跳转至18.HTML超链接-文件跳转.html#xg2-other（other.id）</a>
+    <p>图1</p>
+    <img src="./钟离.png" alt="钟离.png">
+    <!-- 第一种方式：<a>标签搭配name属性设置为锚点 -->
+    <a name="xg1"></a>
+    <!-- 第二种方式：其他标签配合id属性设置为锚点（推荐） -->
+    <p id="xg2">图2</p>
+    <img src="./PATH/1.jpeg" alt="1.jpeg">
+    <!-- 回到顶部 -->
+    <a href="#">回到顶部</a>
+    <!-- 刷新页面 -->
+    <a href="">刷新页面</a>
+    <!-- 执行JS代码 -->
+    <a href="javascript:alert(666);">获取666弹窗</a>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>28.HTML表单-常用控件</title>
+</head>
+<body>
+    <form action="https://search.jd.com/Search">
+        <!-- 文本输入框 -->
+        账户：<input type="text" name="account" value="xdxz" maxlength="20"><br>
+        <!-- 密码输入框 -->
+        密码：<input type="password" name="password" value="123456" maxlength="10"><br>
+        <!-- 单选框 -->
+        性别：
+        <input type="radio" name="gender" value="male" checked>男
+        <input type="radio" name="gender" value="female">女
+        <br>
+        <!-- 多选框 -->
+        爱好：
+        <input type="checkbox" name="hobby" value="Genshin Impact" checked>Genshin Impact
+        <input type="checkbox" name="hobby" value="Elden Ring">Elden Ring
+        <input type="checkbox" name="hobby" value="LOL">LOL
+        <br>
+        <!-- 文本域 -->
+        其他：
+        <textarea name="other" cols="20" rows="5"></textarea><br>
+        <!-- 下拉框 -->
+        籍贯：
+        <select name="place">
+            <option value="福州" selected>福州</option>
+            <option value="厦门">厦门</option>
+            <option value="泉州">泉州</option>
+        </select>
+        <!-- 隐藏域 -->
+        <input type="hidden" name="from" value="jd"><br>
+        <!-- <br> -->
+        <!-- 确认按钮-方式一（无name属性） -->
+        <button type="submit">确认</button>
+        <!-- 确认按钮-方式二（无name属性） -->
+        <!-- <input type="submit" value="确认"> -->
+        <!-- 重置按钮-方式一 -->
+        <button type="reset">重置</button>
+        <!-- 重置按钮-方式二 -->
+        <!-- <input type="reset"> -->
+        <!-- 普通按钮-方式一 -->
+        <button type="button">检测账户是否被注册</button>
+        <!-- 普通按钮-方式二 -->
+        <!-- <input type="button" value="检测账户是否被注册"> -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>32.HTML框架标签</title>
+</head>
+<body>
+    <!-- <iframe>标签嵌入网页资源 -->
+    <!-- <iframe src="https://www.taobao.com" width="800" height="500" frameborder="0"></iframe> -->
+    <!-- <iframe>标签嵌入其他资源 -->
+    <!-- <iframe src="./钟离.png" frameborder="0"></iframe> -->
+    <br>
+    <!-- a.target=iframe.name -->
+    <a href="https://www.taobao.com" target="container">淘宝</a>
+    <!-- form.target=iframe.name -->
+    <form action="https://s.taobao.com/search" target="container">
+        <input type="text" name="q">
+        <input type="submit" value="搜索">
+    </form>
+    <br>
+    <iframe name="container" frameborder="1" width="1000" height="600"></iframe>
+</body>
+</html>

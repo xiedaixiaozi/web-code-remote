@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>12.HTML块级元素与行内元素</title>
+</head>
+<body>
+    <!-- 块级元素：独占一行 -->
+    <!-- 
+    <marquee>XDXZ</marquee>
+    <marquee>XDXZ</marquee>
+    <h1>XDXZ</h1>
+    <h1>XDXZ</h1>
+    <p>XDXZ</p>
+    <p>XDXZ</p> 
+    -->
+    <!-- 行内元素：不独占一行 -->
+    <!-- 
+    <input type="text">
+    <input type="text"> 
+    -->
+    <!-- 块级元素：能嵌套块级元素和行内元素 -->
+    <div>
+        XDXZ1
+        <input type="text">
+        <div>XDXZ2</div>
+    </div>
+    <!-- 行内元素：只能嵌套行内元素 -->
+    <span>
+        XDXZ3
+        <input type="text">
+        <span>XDXZ4</span>
+    </span>
+</body>
+</html>

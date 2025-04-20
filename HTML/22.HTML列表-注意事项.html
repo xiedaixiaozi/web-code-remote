@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>22.HTML列表-注意事项</title>
+</head>
+<body>
+    <h2>有序列表</h2>
+    <ol>
+        <!-- <li>标签不单独使用 -->
+        <li>xxx</li>
+        <li>xxx</li>
+        <!-- 列表中放入其他标签需要<li>标签包裹 -->
+        <li>
+            <a href="https://www.baidu.com">百度</a>
+        </li>
+    </ol>
+    <h2>无序列表</h2>
+    <ul>
+        <li>xxx</li>
+        <li>xxx</li>
+        <!-- 列表的嵌套 -->
+        <li>
+            <span>xx</span>
+            <ul>
+                <li>xx</li>
+                <li>xx</li>
+                <li>
+                    <span>x</span>
+                    <ul>
+                        <li>x</li>
+                        <li>x</li>
+                        <li>x</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h2>自定义列表</h2>
+    <dl>
+        <!-- 1<dt> -> n<dd> -->
+        <dt>xxx</dt>
+        <dd>xxx</dd>
+        <dd>xxx</dd>
+        <dt>xxx</dt>
+        <dd>xxx</dd>
+        <dd>xxx</dd>
+    </dl>
+</body>
+</html>
