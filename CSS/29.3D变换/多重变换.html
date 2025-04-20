@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D空间与景深</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            /* 开启3D空间 */
+            transform-style: preserve-3d;
+            /* 设置景深 */
+            perspective: 500px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 位移 缩放 旋转（最后） */
+            transform: translate3d(10px, 20px, -30px) scale3d(2, 1.5, 1) rotateZ(45deg)
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">Hello</div>
+    </div>
+</body>
+</html>

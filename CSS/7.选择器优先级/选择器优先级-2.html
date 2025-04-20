@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器优先级-2</title>
+    <style>
+        /* 
+        #xxx #id-1 {
+            color: pink;
+        } 
+        */
+        /* 
+        #id-1 {
+            color: orange;
+        } 
+        */
+        /* 
+        .container span.class-1 {
+            color: red;
+        } 
+        */
+        /* 
+        div>p>span:nth-child(1) {
+            color: blue;
+        } 
+        */
+        .class-1 {
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="xxx">
+        <p>
+            <span class="class-1" id="id-1">XDXZ</span>
+            <span>HelloWorld</span>
+        </p>
+    </div>
+</body>
+</html>

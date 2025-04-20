@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表格独有属性</title>
+    <style>
+        table {
+            border: 2px red dashed;
+            width: 500px;
+            /* 表格列宽 */
+            table-layout: fixed;
+            /* 单元格间距（前提：未合并单元格边框） */
+            border-spacing: 10px;
+            /* 合并单元格边框 */
+            border-collapse: separate;
+            /* 隐藏没有内容的单元格（前提：未合并单元格边框） */
+            /* empty-cells: hide; */
+            /* 表格标题位置 */
+            caption-side: bottom;
+        }
+        th,
+        td {
+            border: 1px skyblue solid;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>人员信息</caption>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>xdxz1</td>
+                <td>18</td>
+                <td>男</td>
+                <td>群众</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>xdxz2</td>
+                <td>21</td>
+                <td>女</td>
+                <td>群众</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>xdxz3</td>
+                <td>24</td>
+                <td>男</td>
+                <td>群众</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>xdxz4</td>
+                <td>21</td>
+                <td>女</td>
+                <td>群众</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>xdxz5</td>
+                <td>25</td>
+                <td>男</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

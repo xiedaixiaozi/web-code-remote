@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟选择器</title>
+    <style>
+        /* 相邻兄弟选择器 */
+        /* 选中<div>后紧紧相邻的兄弟<p>元素 */
+        div+p {
+            color: red;
+        }
+        /* 通用兄弟选择器 */
+        /* 选中<div>后所有的兄弟<p>元素 */
+        div~p {
+            color: skyblue;
+        }
+        li+li {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>XDXZ</div>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>JS</p>
+    <p>TS</p>
+    <ul>
+        <li>首页</li>
+        <li>秒杀</li>
+        <li>订单</li>
+        <li>我的</li>
+    </ul>
+</body>
+</html>

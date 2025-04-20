@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>解决</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+            /* 父元素height塌陷的第一种解决方案 */
+            /* height: 122px; */
+            /* 父元素height塌陷的第二种解决方案 */
+            /* float: left; */
+            /* 父元素height塌陷的第三种解决方案 */
+            /* overflow: scroll; */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            float: left;
+        }
+        /* 父元素height塌陷的第四种解决方案 */
+        /* 
+        .clear {
+            clear: both;
+        } 
+        */
+        /* 父元素height塌陷的第五种解决方案 */
+        .outer::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div style="background-color: orange;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, commodi mollitia. Beatae cum vitae ipsum libero expedita error! Enim illum omnis eos quos, vitae minus sunt quisquam voluptatibus tenetur inventore mollitia modi corrupti consequatur reprehenderit laborum corporis. Quia at error fugit dolorem earum sunt, maxime in temporibus, doloribus eligendi modi rem cum voluptatibus nam iusto consequatur totam aliquid asperiores provident explicabo. Facere voluptates modi quos ab, quae nemo odio repudiandae possimus magni suscipit, praesentium perspiciatis, eaque quas! Quae consequatur assumenda voluptatum minus ex doloribus sint voluptates perferendis voluptatem quaerat reiciendis, nihil et quam repellat, illo architecto eligendi maxime tempora aliquid corrupti dolor velit labore ipsam. Similique dolorum beatae eum odio adipisci, facere impedit, voluptates exercitationem libero nemo, voluptas alias magnam. Nulla repellat ipsa aliquid quae tempora, ratione perspiciatis consequuntur modi! Qui sint itaque natus nihil nostrum distinctio cumque, praesentium sunt, mollitia enim expedita! Odit, provident? Est in earum suscipit esse pariatur hic, sequi, natus, consequuntur ad doloremque praesentium autem vero saepe reprehenderit quibusdam rem? Saepe facere veniam tenetur dolor soluta quae impedit praesentium, ad consectetur, iure quia fugit sed obcaecati deleniti consequatur ducimus labore eius distinctio explicabo maxime ex. Esse, repellendus voluptatum? Quo cum qui reprehenderit ratione repudiandae, perferendis dolores.
+    </div>
+</body>
+</html>

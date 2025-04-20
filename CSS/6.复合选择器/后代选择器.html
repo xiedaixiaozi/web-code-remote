@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <style>
+        /* 后代选择器 */
+        ul li {
+            color: red;
+        }
+        ul li a {
+            color: orange;
+        }
+        ol li {
+            color: green;
+        }
+        ol li a {
+            color: grey;
+        }
+        .subject li {
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>唱</li>
+        <li>跳</li>
+        <li>
+            <a href="#">篮球</a>
+        </li>
+    </ul>
+    <ol>
+        <li>xiaochen</li>
+        <li>shenao</li>
+        <li>
+            <a href="#">XDXZ</a>
+        </li>
+    </ol>
+    <hr>
+    <ol class="subject">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+    </ol>
+</body>
+</html>

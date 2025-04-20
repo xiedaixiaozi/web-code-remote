@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+    <style>
+        .outer {
+            width: 700px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+        }
+        .box1{
+            background-color: rebeccapurple;
+        }
+        .box2{
+            background-color: palegoldenrod;
+            /* 相对定位：微调位置；结合绝对定位 */
+            position: relative;
+            /* left/right不可以同时用，同时用则left生效 */
+            left: 100px;
+            /* top/botton不可以同时用，同时用则top生效 */
+            top: 100px;
+            /* 不推荐定位和外边距同时用 */
+            /* margin-left: 50px; */
+            /* 不推荐定位和浮动同时用 */
+            /* float: right; */
+        }
+        .box3{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

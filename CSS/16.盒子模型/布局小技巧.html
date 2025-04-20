@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>布局小技巧</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: grey;
+            /* 外边距塌陷 */
+            overflow: hidden;
+        }
+        .inner {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            /* 元素水平居中 */
+            margin: 0 auto;
+            /* 元素垂直居中 */
+            margin-top: 150px;
+            /* 文字水平居中 */
+            text-align: center;
+            /* 单行文字垂直居中 */
+            line-height: 100px;
+        }
+        .outer-2 {
+            width: 400px;
+            height: 400px;
+            background-color: grey;
+            text-align: center;
+            line-height: 400px;
+        }
+        .inner-2 {
+            background-color: orange;
+            font-size: 20px;
+        }
+        .outer-3 {
+            width: 400px;
+            height: 400px;
+            background-color: grey;
+            text-align: center;
+            line-height: 400px;
+            font-size: 0px;
+        }
+        .inner-3-1 {
+            font-size: 30px;
+            vertical-align: middle;
+            background-color: orange;
+        }
+        .inner-3-2 {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">INNER</div>
+    </div>
+    <hr>
+    <div class="outer-2">
+        <span class="inner-2">
+            HELLO
+        </span>
+    </div>
+    <hr>
+    <div class="outer-3">
+        <span class="inner-3-1">HELLO xxx</span>
+        <img class="inner-3-2" src="../favicon.ico" alt="XDXZ">
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* 版心无高度(通用) */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+/* #region顶部导航栏start */
+.topbar {
+    height: 30px;
+    background-color: #ececec;
+}
+.topbar-left  {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0;
+    color: #666;
+}
+.topbar-left span,
+.topbar-left a {
+    font-size: 12px;
+}
+.topbar-left .hello {
+    margin-right: 28px;
+}
+.topbar-left .login {
+    padding-right: 10px;
+    border-right: 1px solid #666;
+}
+.topbar-left .register {
+    padding-left: 10px;
+}
+.topbar-right .list {
+    height: 30px;
+    line-height: 30px;
+}
+.topbar-right .list li {
+    float: left;
+}
+.topbar-right .list li a {
+    padding: 0 15px;
+    border-right: 1px solid #666;
+}
+.topbar-right .list li:first-child a {
+    padding-left: 0;
+}
+.topbar-right .list li:last-child a {
+    padding-right: 0;
+    /* 移除边框;保留结构 */
+    border: 0 ;
+    /* 移除边框;不保留结构 */
+    /* border: none; */
+}
+/* #endregion顶部导航栏end */

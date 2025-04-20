@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变换原点</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 变换原点 */
+            /* 位移有影响 */
+            /* transform-origin: left top; */
+            /* transform-origin: 50px 50px; */
+            /* transform-origin: 25% 25%; */
+            /* transform-origin: left; */
+            /* 旋转没影响 */
+            /* transform: rotate(45deg); */
+            /* 缩放有影响 */
+            transform: scale(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">Hello</div>
+    </div>
+</body>
+</html>

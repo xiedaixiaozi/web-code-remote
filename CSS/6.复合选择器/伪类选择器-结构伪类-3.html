@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-结构伪类-3</title>
+    <style>
+        div>p:nth-last-child(3) {
+            color: red;
+        }
+        div>p:nth-last-of-type(3) {
+            color: blue;
+        }
+        a:only-child {
+            color: green;
+        }
+        span:only-of-type {
+            color: skyblue;
+        }
+        /* 根元素 */
+        :root {
+            background-color: grey;
+        }
+        /* 没有内容的<div>元素 */
+        div:empty {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>test1</span>
+        <p>sa:99分</p>
+        <p>sb:59分</p>
+        <p>sc:69分</p>
+        <p>sd:89分</p>
+        <span>test2</span>
+        <p>se:55分</p>
+        <p>sf:11分</p>
+        <span>test3</span>
+    </div>
+    <hr>
+    <div>
+        <span>test4</span>
+        <p>sg:77分</p>
+    </div>
+    <hr>
+    <div>
+        <a href="#">test5</a>
+    </div>
+    <hr>
+    <div></div>
+</body>
+</html>

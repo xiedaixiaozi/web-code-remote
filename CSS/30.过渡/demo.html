@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 224px;
+            position: relative;
+            overflow: hidden;
+        }
+        img {
+            transition: 1s linear all;
+        }
+        .mask {
+            width: 400px;
+            height: 224px;
+            background-color: black;
+            opacity: 0;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            line-height: 224px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s linear all;
+            cursor: pointer;
+        }
+        .outer:hover .mask { 
+            opacity: 0.5;
+        }
+        .outer:hover img { 
+            transform: scale(1.6) rotate(20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="../images/shanghai.jpg" alt="">
+        <div class="mask">shanghai</div>
+    </div>
+</body>
+</html>

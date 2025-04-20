@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>三大特性</title>
+    <link rel="stylesheet" href="./三大特性.css">
+    <style>
+        /* 层叠性 */
+        h2 {
+            color: red;
+        }
+        h2 {
+            color: blue;
+        }
+        /* 继承性 */
+        div {
+            color: red;
+            font-size: 40px;
+            background-color: skyblue;
+        }
+        p {
+            color: blue;
+            font-size: 30px;
+        }
+        /* 优先级 */
+        * {
+            color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="id-1">XDXZ</h2>
+    <hr>
+    <div>
+        DIV
+        <span>
+            SPAN
+            <p>
+                P
+                <span>SPAN</span>
+            </p>
+        </span>
+    </div>
+</body>
+</html>

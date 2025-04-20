@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>定位的特殊应用</title>
+    <style>
+        /* 定位可以无视内边距 */
+        /* 
+        .outer {
+            width: 800px;
+            height: 600px;
+            background-color: skyblue;
+            padding: 20px;
+            position: relative;
+        } 
+        */
+        /* 
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            left: 0;
+            top: 0 ;
+        } 
+        */
+        /* 固定定位的元素，没有宽高，想要撑满包含块，则left，right，top，bottom都设置为0 */
+        /*
+        .outer {
+            height: 400px;
+            background-color: grey;
+            position: relative;
+        }
+        */
+        /* 
+        .inner {
+            background-color: orange;
+            font-size: 40px;
+            padding: 20px;
+            border: 10px solid black;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        } 
+        */
+        /* 定位元素（必须设置宽高）实现水平垂直居中 */
+        .outer {
+            width: 800px;
+            height: 400px;
+            background-color: grey;
+            position: relative;
+        } 
+        /* 推荐 */
+        .inner {
+            width: 400px;
+            height: 200px;
+            background-color: orange;
+            font-size: 40px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        } 
+        /* 
+        .inner {
+            width: 400px;
+            height: 200px;
+            background-color: orange;
+            font-size: 40px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -100px;
+        } 
+        */
+    </style>
+</head>
+<body>
+    <!-- 
+    <div class="outer">
+        <div class="inner"></div>
+    </div> 
+    -->
+    <!-- 
+    <div class="outer">
+        <div class="inner">XDXZ</div>
+    </div> 
+    -->
+    <div class="outer">
+        <div class="inner">XDXZ</div>
+    </div>
+</body>
+</html>

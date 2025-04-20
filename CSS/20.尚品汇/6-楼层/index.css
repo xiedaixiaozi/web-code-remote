@@ -1,0 +1,365 @@
+/* 版心无高度(通用) */
+.container {
+    width: 1190px;
+    margin: 0 auto;
+}
+/* 顶部导航栏 */
+/* #region */
+/* start */
+.topbar {
+    height: 30px;
+    background-color: #ececec;
+}
+.topbar-left  {
+    line-height: 30px;
+    font-size: 0;
+    color: #666;
+}
+.topbar-left span,
+.topbar-left a {
+    font-size: 12px;
+}
+.topbar-left .hello {
+    margin-right: 28px;
+}
+.topbar-left .login {
+    padding-right: 10px;
+    border-right: 1px solid #666;
+}
+.topbar-left .register {
+    padding-left: 10px;
+}
+.topbar-right .list {
+    height: 30px;
+    line-height: 30px;
+}
+.topbar-right .list li {
+    float: left;
+}
+.topbar-right .list li a {
+    padding: 0 15px;
+    border-right: 1px solid #666;
+}
+.topbar-right .list li:first-child a {
+    padding-left: 0;
+}
+.topbar-right .list li:last-child a {
+    padding-right: 0;
+    /* 移除边框;保留结构 */
+    border: 0 ;
+    /* 移除边框;不保留结构 */
+    /* border: none; */
+}
+/* end */
+/* #endregion */
+/* 头部 */
+/* #region */
+.header {
+    height: 120px;
+    /* background-color: skyblue; */
+}
+.header .search form {
+    margin: 42px 0;
+    /* 元素之间空白问题 */
+    font-size: 0;
+}
+.header .search input {
+    width: 508px;
+    height: 34px;
+    border: 1px solid #dd302d;
+}
+.header .search button {
+    width: 80px;
+    height: 36px;
+    /* 
+    background-color: #dd302d;
+    background-image: url(../images/serch_icon.png);
+    background-repeat: no-repeat;
+    background-position: 28px 6px; 
+    */
+    background: #dd302d url(../images/serch_icon.png) no-repeat center;
+    /* 行内块空白问题 */
+    vertical-align: bottom;
+}
+/* #endregion */
+/* 主导航 */
+/* #region */
+.navbar-top {
+    height: 48px;
+    border-bottom: 1px solid #dd302d ;
+}
+.navbar-top .types {
+    line-height: 48px;
+    width: 190px;
+    background-color: #dd302d;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    
+}
+.navbar-top .list li {
+    float: left;
+    margin: 0 10px;
+}
+.navbar-top .list li a {
+    line-height: 48px;
+    font-size: 16px;
+}
+/* #endregion */
+/* 主内容-左侧导航 */
+/* #region */
+.content-main {
+    margin-top: 10px;
+}
+.content-main .siderbar-left {
+    width: 190px;
+    height: 458px;
+    background-color: #f4f4f4;
+    position: relative;
+}
+.content-main .siderbar-left li {
+    height: 28px;
+    line-height: 28px;
+    padding-left: 16px;
+}
+.content-main .siderbar-left li:hover {
+    background-color: #dd302d;
+}
+.content-main .siderbar-left li:hover .secondary-menu {
+    display: block;
+}
+.content-main .siderbar-left li>a:hover {
+    color: white;
+}
+.content-main .siderbar-left a {
+    font-size: 14px;
+}
+.content-main .siderbar-left .secondary-menu {
+    width: 680px;
+    height: 448px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 190px;
+    display: none;
+}
+.secondary-menu dl {
+    height: 36px;
+    line-height: 36px;
+    /* 浮动导致的排序异常 */
+    overflow: hidden;
+}
+.secondary-menu dt {
+    float: left;
+    width: 70px;
+    margin-right: 10px;
+}
+.secondary-menu dt a {
+    font-weight: bold;
+    color: #000;
+}
+.secondary-menu dd {
+    float: left;
+}
+.secondary-menu dd a {
+    padding: 0 10px;
+    border-left: 1px solid #666;
+}
+/* #endregion */
+/* 主内容-中间广告 */
+/* #region */
+.content-main .banner {
+    width: 690px;
+    height: 458px;
+    background-color: pink;
+    margin: 0 10px;
+}
+/* #endregion */
+/* 主内容-右侧导航 */
+/* #region */ 
+.content-main .siderbar-right {
+    width: 290px;
+    height: 458px;
+    /* background-color: purple; */
+}
+.content-main .siderbar-right .message {
+    width: 260px;
+    height: 156px;
+    padding: 0 14px;
+    border: 1px solid #d9d9d9;
+}
+.content-main .siderbar-right .message .title {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.content-main .siderbar-right .message .title span {
+    font-size: 14px;
+}
+.content-main .siderbar-right .message .title a {
+    font-size: 12px;
+}
+.content-main .siderbar-right .message .list li {
+    height: 26px;
+    line-height: 26px;
+}
+.content-main .siderbar-right .nav {
+    margin-top: 10px;
+    width: 290px;
+    height: 290px;
+    /* background-color: grey; */
+    /* margin塌陷 */
+    overflow: hidden;
+}
+.content-main .siderbar-right .nav .list li {
+    width: 48px;
+    height: 70px;
+    /* background-color: skyblue; */
+    float: left;
+    margin: 0 11px;
+    text-align: center;
+}
+.content-main .siderbar-right .nav .list li:first-child {
+    margin-left: 16px;
+}
+.content-main .siderbar-right .nav .list:first-child {
+    margin-top: 16px;
+}
+.content-main .siderbar-right .nav .list:nth-child(2) {
+    margin: 17px 0;
+}
+.content-main .siderbar-right .nav .list .picture {
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/精灵图-侧边功能.png');
+}
+.content-main .siderbar-right .nav .list:nth-child(1) li:nth-child(1) .picture {
+    background-position: 0 0;
+}
+.content-main .siderbar-right .nav .list:nth-child(1) li:nth-child(2) .picture {
+    background-position: -48px 0;
+}
+.content-main .siderbar-right .nav .list:nth-child(1) li:nth-child(3) .picture {
+    background-position: -96px 0;
+}
+.content-main .siderbar-right .nav .list:nth-child(1) li:nth-child(4) .picture {
+    background-position: -144px 0;
+}
+.content-main .siderbar-right .nav .list:nth-child(2) li:nth-child(1) .picture {
+    background-position: 0 -48px;
+}
+.content-main .siderbar-right .nav .list:nth-child(2) li:nth-child(2) .picture {
+    background-position: -48px -48px;
+}
+.content-main .siderbar-right .nav .list:nth-child(2) li:nth-child(3) .picture {
+    background-position: -96px -48px;
+}
+.content-main .siderbar-right .nav .list:nth-child(2) li:nth-child(4) .picture {
+    background-position: -144px -48px;
+}
+.content-main .siderbar-right .nav .list:nth-child(3) li:nth-child(1) .picture {
+    background-position: 0 -96px;
+}
+.content-main .siderbar-right .nav .list:nth-child(3) li:nth-child(2) .picture {
+    background-position: -48px -96px;
+}
+.content-main .siderbar-right .nav .list:nth-child(3) li:nth-child(3) .picture {
+    background-position: -96px -96px;
+}
+.content-main .siderbar-right .nav .list:nth-child(3) li:nth-child(4) .picture {
+    background-position: -144px -96px;
+}
+/* #endregion */
+/* 秒杀 */
+/* #region */
+.seckill img {
+    float: left;
+    margin-right: 11px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.seckill img:last-child {
+    margin-right: 0;
+}
+/* #endregion */
+/* 楼层 */
+/* #region */
+.floor {
+    margin-top: 48px;
+}
+.floor .nav {
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #dd302d;
+}
+.floor .nav .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.floor .nav .list li {
+    float: left;
+    font-size: 16px;
+}
+.floor .nav .list li a {
+    padding: 0 10px;
+    border-right: 1px solid #666;
+}
+.floor .nav .list li:first-child a {
+    padding-left: 0;
+}
+.floor .nav .list li:last-child a {
+    padding-right: 0;
+    border: none;
+}
+.floor .info .item {
+    float: left;
+}
+.floor .info .box-1 {
+    width: 190px;
+    height: 392px;
+    padding: 20px;
+}
+.floor .info .box-1 .list li{
+    width: 90px;
+    height: 22px;
+    padding-bottom: 3.5px;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 16px;
+    text-align: center;
+}
+.floor .info .box-1 .list li:nth-of-type(2n-1) {
+    float: left;
+}
+.floor .info .box-1 .list li:nth-of-type(2n) {
+    float: right;
+}
+.floor .info .box-1 .list li:nth-of-type(3),
+.floor .info .box-1 .list li:nth-of-type(4) {
+    margin: 14.4px 0;
+}
+.floor .info .box-1 .list {
+    margin-bottom: 30px;
+}
+.floor .info .box-2 {
+    width: 340px;
+    height: 432px;
+}
+.floor .info .box-3,
+.floor .info .box-4,
+.floor .info .box-5 {
+    width: 206px;
+    height: 432px;
+    border-right: 1px solid #e2e2e2;
+}
+.floor .info .box-3 img,
+.floor .info .box-4 img,
+.floor .info .box-5 img {
+    border-bottom: 1px solid #e2e2e2;
+}
+.floor .info .box-5{
+    border-right: none;
+}
+/* #endregion */

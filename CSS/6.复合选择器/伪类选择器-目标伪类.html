@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-目标伪类</title>
+    <style>
+        div {
+            background-color: grey;
+            height: 200px;
+        }
+        div:target {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#one">To 第1个</a>
+    <a href="#two">To 第2个</a>
+    <a href="#three">To 第3个</a>
+    <a href="#four">To 第4个</a>
+    <a href="#five">To 第5个</a>
+    <a href="#six">To 第6个</a>
+    <div id="one">第1个</div><br>
+    <div id="two">第2个</div><br>
+    <div id="three">第3个</div><br>
+    <div id="four">第4个</div><br>
+    <div id="five">第5个</div><br>
+    <div id="six">第6个</div><br>
+</body>
+</html>

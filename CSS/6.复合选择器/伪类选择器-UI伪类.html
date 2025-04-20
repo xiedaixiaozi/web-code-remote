@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-UI伪类</title>
+    <style>
+        input:checked {
+            width: 100px;
+            height: 100px;
+        }
+        input:disabled {
+            background-color: grey;
+        }
+        input:enabled {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <input type="radio" name="test">
+    <input type="radio" name="test">
+    <input type="text">
+    <input type="text" disabled>
+</body>
+</html>

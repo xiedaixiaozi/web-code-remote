@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 600px;
+            background-color: gray;
+            display: flex;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        .inner-1 {
+            /* 主轴方向的放大比例 */
+            flex-grow: 1;
+        }
+        .inner-2 {
+            flex-grow: 2;
+        }
+        .inner-3 {
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner-1"></div>
+        <div class="inner inner-2"></div>
+        <div class="inner inner-3"></div>
+    </div>
+</body>
+</html>

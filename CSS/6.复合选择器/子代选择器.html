@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>子代选择器</title>
+    <style>
+        /* 子代选择器  */
+        div>a {
+            color: red;
+        }
+        div>p>a {
+            color: skyblue;
+        }
+        .vv>a {
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">shenao</a>
+        <a href="#">shenchen</a>
+        <a href="#">xiaochen</a>
+        <p>
+            <a href="#">XDXZ</a>
+            <div class="vv">
+                <a href="#">vv</a>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

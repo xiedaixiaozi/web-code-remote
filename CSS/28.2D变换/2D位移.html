@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D位移</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+        }
+        .inner-1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* 2D位移 */
+            transform: translateX(50px);
+            /* 百分比参考本身width&height */
+            transform: translateY(25%);
+            transform: translate(25px, 25px);
+        }
+        /* 水平垂直居中 */
+        .inner-2 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner-1">Hello</div>
+    </div>
+    <div class="outer">
+        <div class="inner-2">Hello</div>
+    </div>
+</body>
+</html>

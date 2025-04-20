@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-结构伪类-2</title>
+    <style>
+        /* <div>的最后一个子代<span>元素 */
+        div>span:last-child {
+            color: skyblue;
+        }
+        /* <div>的第三个子代<p>元素 */
+        div>p:nth-child(3) {
+            color: blue;
+        }
+        /* <div>的相同类型的第一个子代<p>元素 */
+        div>p:first-of-type {
+            color: orange;
+        }
+        /* <div>的相同类型的最后一个子代<p>元素 */
+        div>p:last-of-type {
+            color: plum;
+        }
+        /* <div>的相同类型的第三个子代<p>元素 */
+        div>p:nth-of-type(3) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>test1</span>
+        <p>sa:99分</p>
+        <p>sb:59分</p>
+        <p>sc:69分</p>
+        <p>sd:89分</p>
+        <span>test3</span>
+        <p>se:55分</p>
+        <p>sf:11分</p>
+        <span>test2</span>
+    </div>
+</body>
+</html>

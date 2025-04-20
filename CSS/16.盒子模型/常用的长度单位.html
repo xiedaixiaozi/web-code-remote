@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>常用的长度单位</title>
+    <style>
+        /* 第一种长度单位：像素（px） */
+        #id-1 {
+            width: 200px;
+            height: 200px;
+            font-size: 32px;
+            background-color: skyblue;
+        }
+        /* 第二种长度单位：相对于当前元素或其父元素的font-size的倍数（em） */
+        #id-2 {
+            width: 10em;
+            height: 10em;
+            font-size: 20px;
+            background-color: orange;
+        }
+        /* 第三种长度单位：相对于当前根元素的font-size的倍数（rem） */
+        #id-3 {
+            width: 10rem;
+            height: 10rem;
+            font-size: 2rem;
+            background-color: green;
+        }
+        #id-4 {
+            width: 200px;
+            height: 200px;
+            font-size: 40px;
+            background-color: grey;
+        }
+        /* 第三种长度单位：%相对于其父元素的百分比 */
+        .class-1 {
+            width: 50%;
+            height: 25%;
+            font-size: 100%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="id-1">xdxz1</div>
+    <hr>
+    <div id="id-2">xdxz2</div>
+    <hr>
+    <div id="id-3">xdxz3</div>
+    <hr>
+    <div id="id-4">
+        <div class="class-1">XDXZ4</div>
+    </div>
+</body>
+</html>

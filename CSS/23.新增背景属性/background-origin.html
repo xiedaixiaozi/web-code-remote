@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-origin</title>
+    <style>
+        .box-1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+            font-size: 40px;
+            padding: 40px;
+            border: 40px dashed black;
+            
+            background-image: url('../images/bg01.jpg');
+            background-repeat: no-repeat;
+            /* 设置背景图片原点位置（默认padding-box） */
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">Hello</div>
+</body>
+</html>

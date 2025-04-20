@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-clip</title>
+    <style>
+        .box-1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 0 auto;
+            font-size: 140px;
+            color: transparent;
+            padding: 40px;
+            border: 40px dashed black;
+
+            background-image: url('../images/bg02.jpg');
+            /* background-repeat: no-repeat; */
+            /* 设置背景图片剪裁范围（默认border-box） */
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">Hello</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>样式的继承</title>
+    <style>
+        #id-1 {
+            height: 600px;
+            background-color: grey;
+            padding: 50px;
+        }
+        #id-2 {
+            height: 400px;
+            background-color: orange;
+            padding: 50px;
+            font-size: 40px;
+            color: yellow;
+            font-weight: bold;
+        }
+        #id-3 {
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="id-1">
+        <div id="id-2">
+            <div id="id-3">HELLOWORLD</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子外边距塌陷问题</title>
+    <style>
+        .outer {
+            width: 400px;
+            background-color: skyblue;
+            /* 解决1：设置border */
+            /* border: 2px solid black; */
+            /* 解决2：设置padding */
+            /* padding: 1px; */
+            /* 解决3：设置overflow: hidden */
+            overflow: hidden;
+        }
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* 盒子外边距塌陷 */
+            margin-top: 50px;
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 盒子外边距塌陷 */
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>test</div>
+    <div class="outer">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+    </div>
+    <div>test</div>
+</body>
+</html>

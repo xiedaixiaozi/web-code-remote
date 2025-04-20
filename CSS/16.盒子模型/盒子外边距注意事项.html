@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子外边距注意事项</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            background-color: grey;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: orange;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: skyblue;
+        }
+        .box2 {
+            background-color: orange;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .box3 {
+            background-color: green;
+        }
+        img {
+            border: 1px solid black;
+        }
+        .second {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #id-1 {
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            background-color: deepskyblue;
+        }
+        #id-2 {
+            margin: 50px;
+        }
+        #id-3 {
+            background-color: skyblue;
+        }
+        #id-4 {
+            background-color: orange;
+        }
+        #id-5 {
+            background-color: green;
+        }
+        .class-1 {
+            width: 800px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: deepskyblue;
+        }
+        .box4 {
+            background-color: skyblue;
+        }
+        .box5 {
+            background-color: orchid;
+            margin-top: -100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子元素的margin是参考父元素的content计算的 -->
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <hr>
+    <!-- 对于块级元素和行内块元素来说，margin-top/left会影响自己的位置margin-bottom/right会影响兄弟元素的位置 -->
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div><br>
+    <img src="../favicon.ico" alt="XDXZ">
+    <img class="second" src="../favicon.ico" alt="XDXZ">
+    <img src="../favicon.ico" alt="XDXZ">
+    <hr>
+    <!-- 对于行内元素来说，margin-left/right设置有效，margin-top/bottom设置无效 -->
+    <div id="id-1">块级元素DIV</div>
+    <div>XDXZ</div>
+    <br>
+    <img id="id-2" src="../favicon.ico" alt="XDXZ">
+    <div>XDXZ</div>
+    <br>
+    <span id="id-3">Hello</span>
+    <span id="id-4">World</span>
+    <span id="id-5">XDXZ</span>
+    <hr>
+    <!-- 对于块级元素来说，设置margin-left和margin-right同时为auto，实现该元素在父元素中水平居中 -->
+    <div class="class-1">HELLOWORLD</div>
+    <hr>
+    <!-- margin的值可以是负的 -->
+    <div class="box box4">1</div>
+    <div class="box box5">2</div>
+</body>
+</html>

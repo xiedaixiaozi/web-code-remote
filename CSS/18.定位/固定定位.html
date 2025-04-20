@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+        .outer {
+            width: 700px;
+            background-color: skyblue;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+        }
+        .box1 {
+            background-color: rebeccapurple;
+        }
+        .box2 {
+            background-color: palegoldenrod;
+            /* 固定定位 */
+            position: fixed;
+            /* left/right同时使用，left生效 */
+            left: 0;
+            /* top/bottom同时使用，top生效 */
+            top: 0;
+            /* 绝对定位不推荐结合外边距 */
+            /* 绝对定位不能结合浮动，否则浮动失效 */
+            /* 绝对定位的元素都称为定位元素 */
+            /* 定位元素默认宽高被内容撑开，可以设置宽高 */ 
+        }
+        .box3 {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

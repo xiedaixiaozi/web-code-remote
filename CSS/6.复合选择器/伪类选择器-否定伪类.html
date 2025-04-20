@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-否定伪类</title>
+    <style>
+        /* div>p:not(.fail) {
+            color: red;
+        } */
+        /* div>p:not([title^="不及格"]) {
+            color: red;
+        } */
+        div>p:not(:first-child) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>sa:99分</p>
+        <p class="fail" title="不及格">sb:59分</p>
+        <p>sc:69分</p>
+        <p>sd:89分</p>
+        <p class="fail" title="不及格">sd:39分</p>
+        <p>sd:89分</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web字体</title>
+    <style>
+        /* 基本用法 */
+        @font-face {
+            font-family: 'XDXZ';
+            src: url('./Font/方正手迹.ttf');
+        }
+        /* 定制字体 */
+        /* 在线 */
+        @font-face {
+            font-family: "webfont-online";
+            font-weight: 400;
+            src: url("//at.alicdn.com/wf/webfont/du8NPeMmDlBn/3n4OYTE8deHY.woff2") format("woff2"),
+                 url("//at.alicdn.com/wf/webfont/du8NPeMmDlBn/WhGF5zXvMI4r.woff") format("woff");
+            font-display: swap;
+        }
+        /* 本地 */
+        @font-face {
+            font-family: 'webfont-local';
+            font-display: swap;
+            src: url('./Font-2/webfont.eot'); /* IE9 */
+            src: url('./Font-2/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./Font-2/webfont.woff2') format('woff2'),
+            url('./Font-2/webfont.woff') format('woff'), /* chrome,firefox */
+            url('./Font-2/webfont.ttf') format('truetype'), /* chrome,firefox,opera,Safari,Android,iOS 4.2+*/
+            url('./Font-2/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+        h1 {
+            font-size: 100px;
+            font-family: 'webfont-local';
+        } 
+    </style>
+</head>
+<body>
+    <h1>遇事不决,可问春风,春风不语,即随本心</h1>
+</body>
+</html>

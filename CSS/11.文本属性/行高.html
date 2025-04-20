@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>行高</title>
+    <style>
+        #id-1 {
+            font-size: 40px;
+            background-color: skyblue;
+            /* 方式一：像素 */
+            /* line-height: 200px; */
+            /* 方式二：normal */
+            /* line-height: normal; */
+            /* 方式三：数值（推荐） */
+            line-height: 1.5;
+            /* 方式四：百分比 */
+            /* line-height: 150%; */
+            /* 
+            行高过小时，文字重叠，最小值为0
+            负值会导致行高失效
+            行高是可以继承的，当前行的行高以当前最高行高为准
+            存在height时，行高就为height
+            不存在height时，行高为（line-height*行数）
+            行高的作用为：调整多行文字间距
+            调整单行文字垂直居中（height=line-height）
+            */
+        }
+        span {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="id-1">
+        XDXZ懈怠小子shenchenshenao
+        XDXZ懈怠小子shenchenshenao
+        <span>XDXZ懈怠小子shenchenshenao</span>
+        XDXZ懈怠小子shenchenshenao
+        XDXZ懈怠小子shenchenshenao
+        XDXZ懈怠小子shenchenshenao
+    </div>
+</body>
+</html>

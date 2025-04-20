@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>径向渐变</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-left: 30px;
+        }
+        .box-1 {
+            background-image: radial-gradient(red, yellow, green);
+        }
+        .box-2 {
+            /* 设置径向渐变圆心位置 */
+            background-image: radial-gradient(at right top, red, yellow, green);
+        }
+        .box-3 {
+            /* 设置径向渐变圆心位置 */
+            background-image: radial-gradient(at 75px 50px, red, yellow, green);
+        }
+        .box-4 {
+            /* 设置径向渐变形状 */
+            background-image: radial-gradient(circle, red, yellow, green);
+        }
+        .box-5 {
+            /* 设置径向渐变形状 */
+            background-image: radial-gradient(150px 150px, red, yellow, green);
+        }
+        .box-6 {
+            /* 设置径向渐变范围 */
+            background-image: radial-gradient(red 40px, yellow 100px, green 160px);
+        }
+        .box-7 {
+            background-image: radial-gradient(50px 50px at 150px 150px, red 30px, yellow 100px, green 140px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box-1">box-1-默认情况</div>
+    <div class="box box-2">box-2-方向关键词-right top</div>
+    <div class="box box-3">box-3-像素值-75px 50px</div>
+    <div class="box box-4">box-4-circle-圆</div>
+    <div class="box box-5">box-5-像素值-圆</div>
+    <div class="box box-6">box-6-渐变区域</div>
+    <div class="box box-7">box-7-复合属性</div>
+</body>
+</html>

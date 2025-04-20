@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-shrink</title>
+    <style>
+        .outer {
+            width: 800px;
+            height: 600px;
+            background-color: gray;
+            display: flex;
+        }
+        .inner {
+            width: 300px;
+            height: 100px;
+            background-color: skyblue;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        /* 伸缩容器800px，伸缩项目总计900px，需要缩小100px */
+        /* 分母计算：(300×1)+(300×2)+(300×3)=1800 */
+        .inner-1 {
+            /* 主轴方向的缩小比例 */
+            /* 缩小比例计算：(300×1)/1800=1/6 */
+            /* 缩小值计算：100×(1/6) */
+            flex-shrink: 1;
+        }
+        .inner-2 {
+            flex-shrink: 2;
+        }
+        .inner-3 {
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner-1"></div>
+        <div class="inner inner-2"></div>
+        <div class="inner inner-3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合属性</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        @keyframes right-move {
+            from {
+                transform: translate(0px) rotate(0deg);
+                border-radius: 0%;
+                background-color: deepskyblue;
+            }
+            to {
+                transform: translate(900px) rotate(360deg);
+                border-radius: 50%;
+                background-color: pink;
+            }
+        }
+        .outer:hover .inner {
+            /* 动画播放状态 */
+            animation-play-state: paused;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            animation: right-move 2s 2s linear 2 reverse backwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

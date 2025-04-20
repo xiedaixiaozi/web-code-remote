@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器-结构伪类-1</title>
+    <style>
+        /* <div>的第一个子代<p>元素 */
+        /* div>p:first-child {
+            color: red;
+        } */
+        /* <div>的第一个后代<p>元素 */
+        /* div p:first-child {
+            color: red;
+        } */
+        /* 某元素的第一个后代<p>元素 */
+        p:first-child {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构一 -->
+    <!-- 
+    <div>
+        <p>sa:99分</p>
+        <p>sb:59分</p>
+        <p>sc:69分</p>
+        <p>sd:89分</p>
+    </div> 
+    -->
+    <!-- 结构二 -->
+    <!-- 
+    <div>
+        <span>sa:99分</s>
+        <p>sb:59分</p>
+        <p>sc:69分</p>
+        <p>sd:89分</p>
+    </div> 
+    -->
+    <!-- 结构三 -->
+    <p>test1</p>
+    <div>
+        <p>test2</p>
+        <marquee>
+            <p>test3</p>
+            <p>sa:99分</p>
+        </marquee>
+        <p>sb:59分</p>
+        <p>sc:69分</p>
+        <p>sd:89分</p>
+    </div>
+</body>
+</html>

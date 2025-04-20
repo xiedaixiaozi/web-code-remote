@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC</title>
+    <style>
+        .outer {
+            width: 500px;
+            /* height: 400px; */
+            background-color: grey;
+            margin: 0 auto;
+            margin-top: 100px;
+            /* 开启BFC */
+            display: flow-root;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 5px solid black;
+            /* 作用三：子元素浮动导致父元素塌陷，父元素开启BFC */
+            float: left;
+        }
+        .inner-1 {
+            /* 作用一：margin塌陷，父元素开启BFC */
+            /* margin-top: 100px; */
+        }
+        .inner-2 {
+            /* float: left; */
+        }
+        .inner-3 {
+            /* 作用二：自身被浮动元素覆盖，自身开启BFC */
+            /* display: flow-root; */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner-1">1</div>
+        <div class="inner inner-2">2</div>
+        <div class="inner inner-3">3</div>
+    </div>
+</body>
+</html>

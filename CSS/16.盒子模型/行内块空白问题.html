@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>行内块空白问题</title>
+    <style>
+        div {
+            width: 600px;
+            background-color: skyblue;
+            /* 方式三:font-size */
+            /* font-size: 0px; */
+        }
+        img {
+            border: 1px solid red;
+            /* 方式一:vertical-align(推荐) */
+            vertical-align: bottom;
+            /* 方式二:display */
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../favicon.ico" alt="XDXZ">
+    </div>
+</body>
+</html>

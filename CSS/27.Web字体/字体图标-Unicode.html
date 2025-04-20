@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标-Unicode</title>
+    <style>
+        /* Unicode-第一步 */
+        @font-face {
+        font-family: 'iconfont';
+        src: url('./Font-3/iconfont.woff2?t=1741520277062') format('woff2'),
+             url('./Font-3/iconfont.woff?t=1741520277062') format('woff'),
+             url('./Font-3/iconfont.ttf?t=1741520277062') format('truetype');
+        }
+        /* Unicode-第二步 */
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 100px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body>
+    <!-- Unicode-第三步 -->
+    <span class="iconfont">&#x101ea;</span>
+    <span class="iconfont">&#x101eb;</span>
+    <span class="iconfont">&#x101ec;</span>
+    <span class="iconfont">&#x101ed;</span>
+</body>
+</html>
