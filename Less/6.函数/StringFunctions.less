@@ -1,0 +1,20 @@
+/* escape(string)部分字符串进行URL编码 */
+@escape-str: escape("name=[sa]&sex=man");
+.outer::before {
+    content: "@{escape-str}";
+}
+/* e(string)字符串忽略Less解析并原样输出 */ 
+@e-str: e("XDXZ");
+.outer::before {
+    content: "@{e-str}";
+}
+/* %(fomat-string, arguments)字符串格式化 */ 
+@str: %("Hello %s", "World");
+.outer::before {
+    content: "@{str}";
+}
+/* replace(input, pattern, replacement, flags[optional])字符串替换 */ 
+@replace-str: replace("Good Boy", "Boy", "Morning");
+.outer::before {
+    content: "@{replace-str}";
+}

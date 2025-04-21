@@ -1,0 +1,47 @@
+/* color("color-value")解析字符串为颜色值 */
+@color-str: color("#aaa");
+.outer::before {
+    content: "@{color-str}";
+}
+.outer {
+    width: 200px;
+    height: 200px;
+    background-color: @color-str;
+}
+/* image-size("image-path")获取图片宽高（浏览器环境不可用） */
+/* image-width("image-path")获取图片宽（浏览器环境不可用） */
+/* image-height("image-path")获取图片宽（浏览器环境不可用） */
+/* convert(value, "target-unit")转换数组单位 */
+@convert-str: convert(5s, "ms");
+.outer::before {
+    content: "@{convert-str}";
+}
+/* data-uri("file-path")将文件内容转为Base64数据URL */
+@data-uri-str: data-uri("钟离.png");
+.outer::before {
+    content: "@{data-uri-str}";
+}
+/* default()在混合宏中设置参数默认值 */
+.default(@x) when (default()) {
+    x:@x;
+}
+.default() {
+    border: 5px solid black;
+}
+.outer {
+    .default();
+}
+/* unit(value, unit[optional])修改或移除单位 */
+@unit-str: unit(16px);
+.outer::before {
+    content: "@{unit-str}";
+}
+/* get-unit(value)获取值的单位（字符串形式） */
+@get-unit-str: get-unit(16px);
+.outer::before {
+    content: "@{get-unit-str}";
+}
+/* svg-gradient(direction, color, color)生成SVG渐变 */
+.outer {
+    background-image: svg-gradient(to right, skyblue 20%, blue 80%);
+}

@@ -1,0 +1,85 @@
+/* ceil(number)向上取整 */
+@ceil-str: ceil(4.1);
+.outer::before {
+    content: "@{ceil-str}";
+}
+/* floor(number)向下取整 */
+@floor-str: floor(4.9);
+.outer::before {
+    content: "@{floor-str}";
+}
+/* round(number)四舍五入取整 */
+@round-str: round(4.4);
+.outer::before {
+    content: "@{round-str}";
+}
+/* abs(number)绝对值 */
+@abs-str: abs(-66);
+.outer::before {
+    content: "@{abs-str}";
+}
+/* sqrt(number)平方根 */
+@sqrt-str: sqrt(25);
+.outer::before {
+    content: "@{sqrt-str}";
+}
+/* pow(base, exponent)幂运算 */
+@pow-str: pow(2, 3);
+.outer::before {
+    content: "@{pow-str}";
+}
+/* mod(number, number)模运算 */
+@mod-str: mod(10, 3);
+.outer::before {
+    content: "@{mod-str}";
+}
+/* min(value, value)最小值 */
+@min-str: min(10, 3);
+.outer::before {
+    content: "@{min-str}";
+}
+/* max(value, value)最大值 */
+@max-str: max(10, 3);
+.outer::before {
+    content: "@{max-str}";
+}
+/* percentage(number)百分比 */
+@percentage-str: percentage(0.5);
+.outer::before {
+    content: "@{percentage-str}";
+}
+/* sin(angle)正弦函数 */
+@sin-str: sin((pi()/2));
+.outer::before {
+    content: "@{sin-str}";
+}
+/* asin(value)反正弦 */
+@asin-str: asin(1);
+.outer::before {
+    content: "@{asin-str}";
+}
+/* cos(angle)余弦函数 */
+@cos-str: cos(pi());
+.outer::before {
+    content: "@{cos-str}";
+}
+/* acos(value)反余弦 */
+@acos-str: acos(-1);
+.outer::before {
+    content: "@{acos-str}";
+}
+/* tan(angle)正切函数 */
+@tan-str: tan((pi()/4));
+.outer::before {
+    content: "@{tan-str}";
+}
+/* atan(value)反正切 */
+@atan-str: atan(1);
+.outer::before {
+    content: "@{atan-str}";
+}
+/* pi()返回圆周率近似值 */
+@pi-str: pi();
+.outer::before {
+    content: "@{pi-str}";
+}

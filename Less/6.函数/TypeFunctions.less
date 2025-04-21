@@ -1,0 +1,59 @@
+/* isnumber(value)判断是否为数字（含单位） */
+@isnumber-str: isnumber(10px);
+.outer::before {
+    content: "@{isnumber-str}";
+}
+/* isstring(value)判断是否为字符串（带引号） */
+@isstring-str: isstring("10px");
+.outer::before {
+    content: "@{isstring-str}";
+}
+/* iscolor(value)判断是否为颜色值 */
+@iscolor-str: iscolor(skyblue);
+.outer::before {
+    content: "@{iscolor-str}";
+}
+/* iskeyword(value)判断是否为Less关键字（无引号） */
+@iskeyword-str: iskeyword(keyword);
+.outer::before {
+    content: "@{iskeyword-str}";
+}
+/* isurl(value)判断是否为URL类型（url(...)） */
+@isurl-str: isurl(url(...));
+.outer::before {
+    content: "@{isurl-str}";
+}
+/* ispixel(value)判断单位是否为px */
+@ispixel-str: ispixel(10px);
+.outer::before {
+    content: "@{ispixel-str}";
+}
+/* isem(value)判断单位是否为em */
+@isem-str: isem(10em);
+.outer::before {
+    content: "@{isem-str}";
+}
+/* ispercentage(value)判断单位是否为% */
+@ispercentage-str: ispercentage(10%);
+.outer::before {
+    content: "@{ispercentage-str}";
+}
+/* isunit(value, "unit")判断是否匹配指定单位 */
+@isunit-str: isunit(10%, "%");
+.outer::before {
+    content: "@{isunit-str}";
+}
+/* isruleset(value)判断是否为规则集变量（@var:{...}） */
+@rules: {
+    color: skyblue;
+}
+@isruleset-str: isruleset(@rules);
+.outer::before {
+    content: "@{isruleset-str}";
+}
+/* isdefined(var)判断是否变量已定义 */
+@var: XDXZ;
+@isdefined-str: isdefined(@var);
+.outer::before {
+    content: "@{isunit-str}";
+}

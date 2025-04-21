@@ -1,0 +1,25 @@
+/* length(list)获取列表的长度 */
+@list: "a", "b", "c", "d";
+@length: length(@list);
+.outer::before {
+    content: "@{length}";
+}
+/* extract(list, index)获取列表元素 */
+@list: "a", "b", "c", "d";
+@extract: extract(@list, 4);
+.outer::before {
+    content: "@{extract}";
+}
+/* range(start[optional], end, step[optional])生成数组序列 */
+@range: range(10);
+.outer::before {
+    content: "@{range}";
+}
+/* each(list, {@value/@index})遍历列表并生成样式*/
+each(skyblue, {
+    .outer {
+        width: 200px;
+        height: 200px;
+        background-color: @value;
+    }
+})

@@ -1,0 +1,12 @@
+/* 命名空间 */
+#module() {
+    .style-1 {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+    }
+}
+.outer {
+    /* 访问符 */
+    #module > .style-1();
+}

@@ -1,0 +1,11 @@
+/* 定义映射 */
+#colors() {
+    color-1: skyblue;
+    color-2: pink;
+}
+.outer {
+    width: 200px;
+    height: 200px;
+    /* 访问映射值 */
+    background: #colors[color-2];
+}
