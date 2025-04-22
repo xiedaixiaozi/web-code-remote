@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        // 定义对象
+        let person = {
+            name: "XDXZ",
+            age: 23,
+            sayHello: function () {
+                console.log("sayHello");
+            },
+            dance: function () {
+                console.log("dance");
+            }
+        }
+        // 获取对象属性
+        // console.log(person.name);
+        // 修改对象属性
+        person.age = 18;
+        // console.log(person);
+        // 添加对象属性
+        person.height = 170;
+        // console.log(person);
+        // 删除对象属性
+        delete person.name;
+        // console.log(person);
+        // 添加/获取多词对象属性
+        person["best-friend"] = "MJ"
+        // console.log(person["best-friend"]);
+        // console.log(person);
+        // 访问对象方法
+        // person.dance();
+        // 遍历对象
+        for (let item in person) {
+            // 打印属性名
+            console.log(item);
+            // 打印属性值
+            console.log(person[item]);
+        }
+    </script>
+</body>
+</html>

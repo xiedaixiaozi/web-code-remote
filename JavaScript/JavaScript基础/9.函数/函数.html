@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+<body>
+    <script>
+        function fn1(number1, number2) {
+            return number1 + number2;
+        }
+        console.log(fn1(1, 2));
+        // 函数表达式
+        let fn2 = function() {
+            return "XDXZ";
+        }
+        console.log(fn2());
+        // 立即执行函数
+        (function () { console.log(111); })();
+        (function () { console.log(111); }());
+    </script>
+</body>
+</html>
