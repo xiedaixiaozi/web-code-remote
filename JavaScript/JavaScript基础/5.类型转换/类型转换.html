@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类型转换</title>
+</head>
+<body>
+    <script>
+        console.log(123 + "456");
+        console.log(333 - "222");
+        console.log(typeof +"666");
+        console.log(true + "-false");
+        // NaN是number类型的数据，代表非数字
+        console.log(Number("str"));
+        console.log(parseInt("123.456"));
+        console.log(parseFloat("123.456"));
+        console.log(typeof String(true));
+        let number = 999;
+        console.log(typeof number.toString());
+    </script>
+</body>
+</html>
