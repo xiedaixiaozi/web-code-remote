@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+<body>
+    <div class="outer">
+        <!--  -->
+        <div class="inner inner-1">
+            <span>XDXZ</span>
+            <div>Hello</div>
+            <a href="http://www.baidu.com">http://www.baidu.com</a>
+        </div>
+        <div class="inner inner-2"></div>
+        <div class="inner inner-3"></div>
+    </div>
+    <script>
+        const outer = document.querySelector(".outer");
+        const inner1 = document.querySelector(".inner-1");
+        const inner2 = document.querySelector(".inner-2");
+        // 查找节点
+        // 最近的父节点，找不到返回null
+        console.log(inner1.parentNode);
+        // 所有子节点，包括文本和注释等
+        console.log(outer.childNodes);
+        // 所有元素节点，返回的是一个伪数组
+        console.log(outer.children);
+        // 上一个兄弟节点
+        console.log(inner2.previousElementSibling);
+        // 下一个兄弟节点
+        console.log(inner2.nextElementSibling);
+        // 增加节点
+        // 创造一个新的元素节点
+        const divNode = document.createElement("div");
+        // 追加到父元素中的末尾
+        outer.appendChild(divNode);
+        // 追加到某个元素前面
+        // outer.insertBefore(divNode, inner1);
+        // 克隆节点（true则包含后代节点，false则不包含后代节点）
+        const cloneNode = divNode.cloneNode(true);
+        outer.appendChild(cloneNode);
+        // 删除节点
+        outer.removeChild(divNode);
+    </script>
+</body>
+</html>

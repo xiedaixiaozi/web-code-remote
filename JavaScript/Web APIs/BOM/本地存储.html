@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地存储</title>
+</head>
+<body>
+    <script>
+        // localStorage
+        // 存储数据
+        localStorage.setItem("XDXZ", "SA");
+        // 获取数据
+        // console.log(localStorage.getItem("XDXZ"));
+        // 删除数据
+        localStorage.removeItem("XDXZ");
+        // sessionStorage
+        // 存储数据
+        sessionStorage.setItem("xdxz", "sa");
+        // 获取数据
+        // console.log(sessionStorage.getItem("xdxz"));
+        // 删除数据
+        sessionStorage.removeItem("xdxz");
+        // 存储复杂数据类型
+        const shenAo = {
+            name: "SC",
+            age: 23
+        }
+        // 对象转化为字符串
+        localStorage.setItem("shenAo", JSON.stringify(shenAo));
+        console.log(localStorage.getItem("shenAo"));
+        // 字符串转化为对象
+        console.log(JSON.parse(localStorage.getItem("shenAo")))
+        localStorage.removeItem("shenAo");
+    </script>
+</body>
+</html>

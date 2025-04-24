@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取DOM对象</title>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        console.log(document.querySelector("body"));
+        console.log(document.querySelector("XDXZ"));
+        console.log(document.querySelectorAll("div"));
+        // 一个有长度有索引的伪数组，无方法
+        const arr = document.querySelectorAll("div");
+        console.log(arr.length);
+    </script>
+</body>
+</html>

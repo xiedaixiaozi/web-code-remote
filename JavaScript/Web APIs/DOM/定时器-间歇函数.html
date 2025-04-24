@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器-间歇函数</title>
+</head>
+<body>
+    <script>
+        let number = 5;
+        const sayHello = function() {
+            console.log(number);
+            number--;
+            if (number === 0) {
+                clearInterval(timer);
+            }
+        }
+        let timer = setInterval(sayHello, 0);
+        // 定时器返回值是一个id数字
+        // console.log(timer); 
+    </script>
+</body>
+</html>
