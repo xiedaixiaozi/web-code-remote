@@ -38,11 +38,23 @@
         });
         // console.log(arr);
         // 数组迭代
-        arr.map(function (item, index) {
+        const arrMap = arr.map(function (item, index) {
+            return item = item + "-str";
+        });
+        // console.log(arrMap);
+        // 将数组所有元素通过指定分隔符分隔开后返回一个字符串
+        // console.log(arr.join("-"));
+        // 数组遍历
+        arr.forEach(function (item, index) {
             // console.log(`${index}:${item}`);
         });
-        // 将数组所有元素通过指定分隔符分隔开后返回一个字符串
-        console.log(arr.join("-"));
+        // 数组过滤
+        const arrFilter = arr.filter(function (item, index) {
+            return item > 5;
+        })
+        // console.log(arrFilter);
+        // 累加器
+        // console.log(arr.reduce((prex, item) => prex + item));
     </script>
 </body>
 </html>

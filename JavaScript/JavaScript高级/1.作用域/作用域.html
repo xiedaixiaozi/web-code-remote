@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域</title>
+</head>
+<body>
+    <script>
+        // 局部作用域
+        // 函数作用域
+        function fn1() {
+            const number1 = 1;
+        }
+        // number1 is not defined
+        // console.log(number1);
+        // 块作用域
+        for (let number2 = 0; number2 < 2; number2++) {
+            
+        }
+        // number2 is not defined
+        // console.log(number2);
+        // 全局作用域
+        let number3 = 10;
+        // console.log(number3);
+        // 作用域链
+        function fn2 () {
+            let number3 = 100;
+            function fn3 () {
+                number3 = 1000;
+                console.log(number3);
+            }
+            fn3();
+        }
+        fn2();
+        // 闭包
+        function outer () {
+            const number4 = 2;
+            function inner () {
+                console.log(number4);
+            }
+            return inner;
+        }
+    </script>
+</body>
+</html>

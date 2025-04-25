@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象进阶</title>
+</head>
+<body>
+    <script>
+        // 字面量
+        const obj1 = {
+            name: "SA",
+            age: 23
+        }
+        // console.log(obj1);
+        // new Object
+        const obj2 = new Object({
+            name: "SC",
+            age: 22
+        });
+        // console.log(obj2);
+        // 构造函数
+        function Obj(name, age) {
+            // 实例成员
+            this.name = name;
+            this.age = age;
+            // 静态成员
+            Obj.address = "Earth";
+        }
+        const obj3 = new Obj("XDXZ", 18);
+        // console.log(obj3);
+        // Object
+        // 获取所有属性
+        console.log(Object.keys(obj3));
+        // 获取所有属性值
+        console.log(Object.values(obj3));
+        // 对象拷贝
+        const obj4 = {};
+        Object.assign(obj4, obj3);
+        console.log(obj4);
+    </script>
+</body>
+</html>
