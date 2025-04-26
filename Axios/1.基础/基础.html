@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础</title>
+    <!-- 引入Axios.js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <script>
+        axios({
+            // 请求方法
+            method: "xxx",
+            // URL地址
+            url: "xxx",
+            // URL查询参数
+            params: {
+                params: "xxx"
+            },
+            // 数据提交
+            data: {
+                data: "xxx"
+            }
+        }).then(result => {
+            // 处理数据
+        }).catch(error => {
+            // 处理错误
+        })
+    </script>
+</body>
+</html>

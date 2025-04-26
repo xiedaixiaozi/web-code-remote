@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原理</title>
+</head>
+<body>
+    <script>
+        // 创建XMLHttpRequest
+        const xml = new XMLHttpRequest();
+        // 创建URLSearchParams
+        const params = new URLSearchParams({
+            params: "xxx"
+        })
+        // 设置请求方式、URL地址和请求参数
+        xml.open("xxx", `xxx?${params.toString()}`);
+        // 设置请求头
+        xml.setRequestHeader("Content-Type", "applicaiton/json");
+        // 数据提交
+        const data = { data: "xxx" }
+        const dataStr = JSON.stringify(data);
+        // 发起请求
+        xml.send(dataStr);
+        // 监听事件（请求结束时触发）
+        xml.addEventListener("loadend", () => {
+            // console.log(xml.response);
+        })
+        // 创建Promise
+        const promise = new Promise((resolve, reject) => {
+            // 成功：resolve(xxx)  then(xxx)
+            // 失败：reject(xxx)   catch(xxx)
+        })
+        promise.then(result => {
+            
+        }).catch(error => {
+
+        })
+    </script>
+</body>
+</html>
