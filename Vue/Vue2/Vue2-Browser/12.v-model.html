@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-model</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-model数据双向绑定组件/表单控件[<input><select><textarea>] -->
+        <div>
+            <input type="text" v-model="i">
+            <p>i: {{ i }}</p>
+        </div>
+        <div>
+            <select v-model="s">
+                <option value="selectA">A</option>
+                <option value="selectB">B</option>
+                <option value="selectC">C</option>
+            </select>
+            <p>s: {{ s }}</p>
+        </div>
+        <div>
+            <textarea name="xxx" v-model="t"></textarea>
+            <p>t: {{ t }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                i: "",
+                s: "",
+                t: ""
+            },
+            methods: {
+                
+            }
+        });
+    </script>
+</body>
+</html>

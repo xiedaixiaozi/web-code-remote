@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-bind:/:设置标签属性 -->
+        <!-- 方式一 -->
+        <input v-bind:type="i">
+        <!-- 方式二 -->
+        <input :type="p">
+        <!-- 设置标签class -->
+        <div :class="obj"></div>
+        <div :class="arr"></div>
+        <!-- 设置标签style -->
+        <div :style="s"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                i: "input",
+                p: "password",
+                obj: {
+                    class1: true,
+                    class2: false
+                },
+                arr: [
+                    "class3",
+                    "class4",
+                    "class5"
+                ],
+                s: {
+                    width: "200px",
+                    height: "200px",
+                    backgroundColor: "skyblue",
+                    marginTop: "10px"
+                }
+            },
+            methods: {
+                
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch</title>
+</head>
+<body>
+    <div id="app">
+        message: <input type="text" v-model="message">
+        obj.name: <input type="text" v-model="obj.name">
+        obj.age: <input type="text" v-model="obj.age">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "",
+                obj: {
+                    name: "XDXZ",
+                    age: 23
+                }
+            },
+            methods: {
+                objChange(newVal, oldVal) {
+                    console.log("objChange");
+                    console.log(`oldVal:${JSON.stringify(oldVal)}`);
+                    console.log(`newVal:${JSON.stringify(newVal)}`);
+                }
+            },
+            computed: {
+                
+            },
+            // 监听器
+            watch: {
+                // 监听属性
+                message: function (newVal, oldVal) {
+                    console.log(`oldVal:${oldVal}`);
+                    console.log(`newVal:${newVal}`);
+                },
+                // 监听对象属性
+                // "obj.name": function (newVal, oldVal) {
+                //     console.log(`obj.name[oldVal]:${oldVal}`);
+                //     console.log(`obj.name[newVal]:${newVal}`);
+                // },
+                // 监听对象
+                obj: {
+                    // 回调函数
+                    handler: "objChange",
+                    // 复杂类型深度监听
+                    deep: true,
+                    // 立刻触发一次
+                    immediate: true
+                }
+            }
+        });
+    </script>
+</body>
+</html>
